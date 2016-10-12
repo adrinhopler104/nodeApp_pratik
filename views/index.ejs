@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Handlebars.js Tutorial</title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+</head>
+
+<body>
+ 
+<script id="some-template" type="text/x-handlebars-template"> <head></head><table>
+    <thead> 
+        <th>Name</th> 
+        <th>Job Title</th> 
+        <th>Twitter</th> 
+    </thead> 
+    <tbody> 
+        {{#users}} 
+        <tr> 
+            <td>{{fullName person}}</td> 
+            <td>{{jobTitle}}</td> 
+            <td><a href="https://twitter.com/{{twitter}}">@{{twitter}}</a></td> 
+        </tr> 
+        {{/users}} 
+    </tbody> 
+</table> 
+</script>
+ <div>
+ <input type="number" id="i_width" value=400>
+ <input type="number" id="i_height" value=300>
+ <button id="i_create" onClick="makeImgfromJson()">Create iFrame</button>
+ <canvas id="canvas"></canvas>
+ </div>
+  <!-- REQUIRE HANDLEBARS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/javascripts/handlebars/handlebars-v4.0.5.js"></script>
+  <script src="/javascripts/makeIframe.js"></script>
+
+  <script src="/javascripts/iframe2image/domvas.js"></script>
+  <script src="/javascripts/iframe2image/iframe2image.js"></script>
+
+  <!-- RENDER TEMPLATE AFTER EVERYTHING ELSE LOADED -->
+
+ 
+</body>
+</html>
